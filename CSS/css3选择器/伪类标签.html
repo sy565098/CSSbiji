@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            /* 宽度、高度 */
+            width: 200px;
+            height: 200px;
+            /* 边框 */
+            border: 1px solid #000;
+        }
+
+        p:empty {
+            /* 选择空标签 */
+            background-color: red;
+        }
+
+        input:focus {
+            /* 选择聚焦的标签 */
+            background-color: red;
+        }
+
+        input:disabled {
+            /* 选择无效的标签 */
+            border: 1px solid #000;
+        }
+
+        input:enabled {
+            /* 选择有效的标签 */
+            background-color: yellow;
+        }
+
+        input:checked+span {
+            /* 选择已经勾选的单选按钮或者复选框 */
+            color: red;
+        }
+
+        :root {
+            /* 选择html标签 */
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="para"></p>
+    <p class="para"></p>
+    <p class="para">123</dp>
+    <p class="para"> </p>
+    <div>
+        <input type="text">
+        <input type="text">
+        <input type="text" disabled>
+        <input type="text" disabled>
+        <input type="text" disabled>
+    </div>
+    <p>
+        <input type="checkbox"><span>文字</span>
+        <input type="checkbox"><span>文字</span>
+        <input type="checkbox"><span>文字</span>
+        <input type="checkbox"><span>文字</span>
+        <input type="checkbox"><span>文字</span>
+    </p>
+</body>
+
+</html>
